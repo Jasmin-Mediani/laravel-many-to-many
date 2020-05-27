@@ -19,4 +19,12 @@ class Photo extends Model
     public function user() {
         return $this->belongsTo('App\User');
     }
+
+    //collego le pagine con photo... hanno una many to many
+
+    public function pages() {
+        return $this->belongsToMany('App\page');
+    }
+
+    
 }

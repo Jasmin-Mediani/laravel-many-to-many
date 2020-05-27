@@ -31,4 +31,9 @@ class Page extends Model
     public function tags() {
         return $this->belongsToMany('App\Tag');
     }
+
+    public function photos() {
+        return $this->belongsToMany('App\Photo');
+    }
+
 }
