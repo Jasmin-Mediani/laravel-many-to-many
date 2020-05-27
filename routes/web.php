@@ -21,15 +21,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
 Route::prefix('admin')
-->name('admin')     //aggiunge admin. Nella rotta davanti a show, index eccetera
+->name('admin.')    //aggiunge admin. Nella rotta davanti a show, index eccetera
 ->namespace('Admin')
 ->middleware('auth')
-->group (function() {
+->group(function () {
     Route::resource('pages', 'PageController');
-    //Route::resource('photos', 'PhotoController'); 
+    // Route::resource('photos', 'PhotoController');
 });
-    
 
 

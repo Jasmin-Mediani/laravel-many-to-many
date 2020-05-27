@@ -34,8 +34,6 @@ class HomeController extends Controller
         //$category = Category::find(1);
         //$page = Page::find(1);
         //dd($User->info->bio);
-
-
         //dd($user->info);
         //dd($users);
         return view('home');
