@@ -70,4 +70,5 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src="{{ URL::asset('js/prova.js') }}"></script>
 @endsection
