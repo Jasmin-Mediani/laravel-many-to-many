@@ -29,8 +29,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        dd($users);
+        //$users = User::all();
+        //$user = User::find(2);
+        //$category = Category::find(1);
+        //$page = Page::find(1);
+        //dd($User->info->bio);
+
+
+        //dd($user->info);
+        //dd($users);
         return view('home');
     }
 }
