@@ -69,7 +69,7 @@ class PageController extends Controller
         }
         
         $page = new Page;
-        $data['slug'] = $data['slug'] = Str::slug($data['title'] , '-');
+        $data['slug'] = Str::slug($data['title'] , '-');
         $data['user_id'] = Auth::id();
         $page->fill($data);
         $saved = $page->save();
