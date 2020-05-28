@@ -36,7 +36,7 @@
               @foreach ($tags as $key => $tag)  
                  
               <label for="tags-{{$tag->id}}">{{$tag->name}}</label>
-              <input type="checkbox" name="tags[]" id="tags-{{$tag->id}}" {{(is_array(old('tags')) && in_array($tag->id, old('tags'))) ? 'checked' : ''}}>
+              <input type="checkbox" name="tags[]" id="tags-{{$tag->id}}" value="{{$tag->id}}" {{(!empty(old('tags.'. $key))) ? 'checked' : ''}}>
                 @endforeach
             </div>
             <div class="form-group">
