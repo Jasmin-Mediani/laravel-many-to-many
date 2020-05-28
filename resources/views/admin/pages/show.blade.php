@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-12">
       <h2>{{$page->title}}</h2>
-      <h3>Categoria :{{$page->category->name}}</h3>
+      <h3>Categoria: {{$page->category->name}}</h3>
       <small>Scritto da: {{$page->user->name}}</small>
       <small>Ultima modifica: {{$page->updated_at}}</small>
       <div>
@@ -23,5 +23,10 @@
       @endif
     </div>
   </div>
+    <div>
+        @foreach ($page->photos as $photo)
+        <img src="{{$photo->path}}" alt="">
+        @endforeach
+    </div>
 </div>
 @endsection
